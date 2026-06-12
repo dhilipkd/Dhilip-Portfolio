@@ -1,0 +1,113 @@
+.navbar {
+    backdrop-filter: blur(20px);
+    background: var(--glass-bg);
+    border: 2px solid rgba(255, 123, 0, 0.3);
+    box-shadow:
+        0 0 30px rgba(255, 123, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.logo-image {
+    border: 1px solid rgba(255, 123, 0, 0.3);
+    /* background: #757373; */
+}
+
+.nav-link {
+    position: relative;
+    color: var(--text-muted);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 0;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--primary);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 50%;
+}
+
+.active-link {
+    color: var(--primary);
+}
+
+.active-link::after {
+    width: 50%;
+}
+
+/* Resume Button */
+.resume-button {
+    background: var(--primary);
+    border: 1px solid var(--primary) !important;
+    color: #000 !important;
+    font-weight: 700 !important;
+    border-radius: 30px !important;
+    transition: all 0.3s ease !important;
+    padding: 0.75rem 1.25rem !important;
+    outline: none;
+    box-shadow: none;
+}
+
+.resume-button:hover {
+    background: var(--primary-hover) !important;
+    border-color: var(--primary-hover) !important;
+    transform: translateY(-2px);
+}
+
+/* Mobile Menu */
+.mobile-menu-btn {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+
+    .mobile-menu-btn {
+        display: block;
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .3s ease;
+    }
+
+    .mobile-menu-btn:hover {
+        border-color: rgba(255, 123, 0, .4);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .resume-button {
+        padding: 0.65rem 1rem !important;
+        font-size: 0.85rem !important;
+    }
+
+    .resume-button svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+    .resume-button {
+        padding: 0.6rem 0.9rem !important;
+        font-size: 0.8rem !important;
+    }
+}
