@@ -1,0 +1,349 @@
+/* ===================================
+   About Section
+=================================== */
+.about-section {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+/* ===================================
+   Layout
+=================================== */
+.about-grid {
+    display: grid;
+    grid-template-columns: 520px 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* ===================================
+   Responsive
+=================================== */
+
+@media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 80px 0;
+    }
+
+    .about-grid {
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+
+/* ===================================
+   About Content
+=================================== */
+.about-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.about-label-line {
+    width: 40px;
+    height: 2px;
+    background: var(--primary);
+}
+
+.about-title {
+    font-size: clamp(48px, 6vw, 82px);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.about-title span {
+    color: var(--primary);
+}
+
+.about-title-underline {
+    width: 70px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--primary);
+    margin-bottom: 30px;
+}
+
+.about-description {
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 22px;
+    max-width: 720px;
+}
+
+.about-description span {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* =========================
+   Highlights
+========================= */
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.about-highlight-card {
+    background: var(--glass-bg);
+    border: 1px solid rgba(255, 123, 0, 0.12);
+    border-radius: 24px;
+    padding: 20px 18px;
+    transition: all 0.35s ease;
+    backdrop-filter: blur(20px);
+}
+
+.about-highlight-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 123, 0, 0.4);
+    box-shadow: 0 0 25px rgba(255, 123, 0, 0.12);
+}
+
+.about-highlight-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 123, 0, 0.12);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.about-highlight-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.about-highlight-description {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==========================
+   About Image
+========================== */
+
+.about-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+}
+
+.about-image-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 123, 0, 0.25);
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    box-shadow:
+        0 0 40px rgba(255, 123, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.about-profile-image {
+    width: 100%;
+    height: 680px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==========================
+   Orbit
+========================== */
+
+.about-orbit {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.about-orbit::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    right: -40px;
+    height: 220px;
+    border: 1px solid rgba(255, 123, 0, 0.4);
+    border-radius: 50%;
+    transform: rotate(18deg);
+}
+
+.orbit-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--primary);
+}
+
+.orbit-dot-1 {
+    top: 35%;
+    left: -10px;
+}
+
+.orbit-dot-2 {
+    bottom: 20%;
+    right: 20px;
+}
+
+/* ==========================
+   Floating Cards
+========================== */
+
+.about-floating-card {
+    position: absolute;
+    z-index: 5;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 123, 0, 0.15);
+    border-radius: 18px;
+    padding: 16px;
+}
+
+.top-card {
+    top: 30px;
+    left: 10px;
+}
+
+.bottom-card {
+    bottom: 30px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-number {
+    display: block;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card-label {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.available-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 10px #22c55e;
+}
+
+.bottom-card h4 {
+    margin: 0;
+    color: white;
+    font-size: 13px;
+}
+
+.bottom-card p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+/* ==========================
+   About Stats
+========================== */
+.about-stats-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    padding: 20px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, .03);
+    border: 1px solid rgba(255, 123, 0, .12);
+    backdrop-filter: blur(24px);
+    box-shadow:
+        0 0 30px rgba(255, 123, 0, .08);
+}
+
+.about-stat-item {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.about-stat-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 1px;
+    height: 50px;
+    background: rgba(255, 255, 255, .08);
+    transform: translateY(-50%);
+}
+
+.about-stat-item h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.about-stat-item p {
+    margin-top: 6px;
+    color: var(--text-muted);
+}
+
+@media (max-width:768px) {
+
+    .about-stats-card {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .about-stat-item {
+        min-width: calc(50% - 12px);
+    }
+
+    .about-stat-item::after {
+        display: none;
+    }
+}
