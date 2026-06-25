@@ -37,7 +37,7 @@ export default function AboutHighlights() {
                 return (
                     <motion.div
                         key={item.title}
-                        className="about-highlight-card"
+                        className="about-highlight-card py-5 px-4 rounded-[24px]"
                         initial={{
                             opacity: 0,
                             y: 30,
@@ -54,11 +54,11 @@ export default function AboutHighlights() {
                             delay: index * 0.15,
                         }}
                     >
-                        <div className="about-highlight-icon">
+                        <div className="about-highlight-icon mb-2 rounded-full">
                             <Icon size={28} />
                         </div>
 
-                        <h4 className="about-highlight-title">
+                        <h4 className="about-highlight-title mb-2">
                             {item.title}
                         </h4>
 

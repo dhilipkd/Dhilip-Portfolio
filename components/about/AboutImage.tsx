@@ -38,7 +38,7 @@ export default function AboutImage() {
             </div>
 
             {/* Image */}
-            <div className="about-image-card">
+            <div className="about-image-card rounded-[28px]">
                 <Image
                     src={profileImage}
                     alt="Dhilip"

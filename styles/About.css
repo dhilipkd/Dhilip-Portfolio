@@ -112,36 +112,31 @@
 
 .about-highlight-card {
     background: var(--glass-bg);
-    border: 1px solid rgba(255, 123, 0, 0.12);
-    border-radius: 24px;
-    padding: 20px 18px;
+    border: 1px solid var(--border);
     transition: all 0.35s ease;
     backdrop-filter: blur(20px);
 }
 
 .about-highlight-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(255, 123, 0, 0.4);
-    box-shadow: 0 0 25px rgba(255, 123, 0, 0.12);
+    transform: scale(1.02) !important;
+    border-color: rgba(255, 123, 0, 0.62);
+    box-shadow: 0 0 25px rgba(255, 123, 0, 0.52);
 }
 
 .about-highlight-icon {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
     background: rgba(255, 123, 0, 0.12);
     color: var(--primary);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 18px;
 }
 
 .about-highlight-title {
     font-size: 16px;
     font-weight: 600;
     color: #fff;
-    margin-bottom: 12px;
 }
 
 .about-highlight-description {
@@ -170,12 +165,12 @@
 .about-image-card {
     position: relative;
     overflow: hidden;
-    border-radius: 28px;
-    border: 1px solid rgba(255, 123, 0, 0.25);
-    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    border-bottom: 4px solid var(--primary);
+    background: var(--card);
     backdrop-filter: blur(20px);
     box-shadow:
-        0 0 40px rgba(255, 123, 0, 0.08),
+        0 0 40px rgba(255, 123, 0, 0.18),
         inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
@@ -231,25 +226,24 @@
 /* ==========================
    Floating Cards
 ========================== */
-
 .about-floating-card {
     position: absolute;
     z-index: 5;
-    background: rgba(10, 10, 10, 0.8);
+    background: var(--glass-bg);
     backdrop-filter: blur(18px);
-    border: 1px solid rgba(255, 123, 0, 0.15);
+    border: 1px solid var(--border);
     border-radius: 18px;
     padding: 16px;
 }
 
 .top-card {
     top: 30px;
-    left: 10px;
+    left: 20px;
 }
 
 .bottom-card {
     bottom: 30px;
-    left: 10px;
+    left: 20px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -277,7 +271,7 @@
 
 .bottom-card h4 {
     margin: 0;
-    color: white;
+    color: var(--text);
     font-size: 13px;
 }
 
@@ -292,45 +286,51 @@
 ========================== */
 .about-stats-card {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    margin-top: 60px;
-    padding: 20px;
-    border-radius: 28px;
-    background: rgba(255, 255, 255, .03);
-    border: 1px solid rgba(255, 123, 0, .12);
+    background: var(--glass-bg);
+    border: 1px solid var(--border);
     backdrop-filter: blur(24px);
-    box-shadow:
-        0 0 30px rgba(255, 123, 0, .08);
+    box-shadow: 0 0 30px rgba(255, 123, 0, 0.1);
 }
 
 .about-stat-item {
-    flex: 1;
-    text-align: center;
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }
 
 .about-stat-item:not(:last-child)::after {
     content: "";
     position: absolute;
-    right: 0;
+    right: -60px;
     top: 50%;
     width: 1px;
     height: 50px;
-    background: rgba(255, 255, 255, .08);
+    background: rgba(255, 255, 255, 0.12);
     transform: translateY(-50%);
 }
 
+.about-stat-icon {
+    color: var(--primary);
+    opacity: 0.85;
+}
+
 .about-stat-item h3 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: var(--primary);
+    margin: 0;
+    line-height: 1;
 }
 
 .about-stat-item p {
-    margin-top: 6px;
+    margin: 0;
     color: var(--text-muted);
+    font-size: 13px;
 }
+
 
 @media (max-width:768px) {
 
